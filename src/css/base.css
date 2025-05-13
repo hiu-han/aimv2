@@ -1109,11 +1109,11 @@
   content: '';
   display: block;
   position: absolute;
-  top: 52%;
+  top: 50%;
   left: 0px;
   transform: translateY(-50%);
   width: 16px;
-  height: 16px;
+  height: 14px;
   background-image: url('../assets/img/icon/icon-txt-bubble.svg');
   background-position: center;
   background-size: contain;
@@ -1217,6 +1217,7 @@
   padding: 24px;
 }
 .conv .conv__box {
+  position: relative;
   width: 80%;
   padding: 14px;
   border-radius: 14px;
@@ -1224,7 +1225,21 @@
   /* box-shadow: var(--bxsd-s); */
 }
 .conv .conv__box.ai {
+  padding-top: 44px;
   background-color: var(--bg-primary-sub);
+}
+.conv .conv__box.ai::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 15px;
+  width: 40px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-image: url('../assets/img/icon/icon-aim-414141.png');
+  background-position: 0% 0%;
+  background-size: contain;
 }
 .conv .conv__box.user {
   align-self: flex-end;
@@ -1253,10 +1268,4 @@
 }
 .conv__box .conv-subs {
   color: #414245;
-}
-
-.modal__container.ai {
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
 }

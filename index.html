@@ -1,0 +1,312 @@
+<!-- index // OVERVIEW // 소셜 반응 레이더 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="버즈 에임">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="Buzz Aim">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <meta rel="icon" type="image/x-icon" href="./favicon.ico" size="16x16">
+  <title>Buzz Aim</title>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <div id="wrap" class="page-wrap overview-page">
+    <div id="header" class="slideIn"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <div id="aside">
+          <aside class="side-bar">
+            <div class="menu__wrap">
+              <ul class="menu__list">
+                <li id="menu01" class="menu__item on">
+                  <a href="./index.html">
+                    <em class="icon"></em>
+                    <span class="name">OVERVIEW</span>
+                  </a>
+                </li>
+                <li id="menu02" class="menu__item">
+                  <a href="./brand.html">
+                    <em class="icon"></em>
+                    <span class="name">INDEX</span>
+                  </a>
+                </li>
+                <li id="menu03" class="menu__item">
+                  <a href="./issue.html">
+                    <em class="icon"></em>
+                    <span class="name">ISSUE</span>
+                  </a>
+                </li>
+                <li id="menu04" class="menu__item">
+                  <a href="./persona.html">
+                    <em class="icon"></em>
+                    <span class="name">PERSONA</span>
+                  </a>
+                </li>
+                <li id="menu05" class="menu__item">
+                  <a href="./aiReport.html">
+                    <em class="icon"></em>
+                    <span class="name">AI</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 콘텐츠 레이아웃 섹션 // 콘텐츠 외부 박스 // 본 페이지 내 1개 고정 -->
+        <section class="layout-sect sec--center">
+          <div class="sect__inner">
+            <div class="sect-top">
+              <div class="top-element brand-tab slideIn delay-1">
+                <div class="tap__list in">
+                  <p class="tap__item b-01 on"><span>로보락</span></p>
+                  <p class="tap__item b-02"><span>드리미</span></p>
+                  <p class="tap__item b-03"><span>삼성 스팀</span></p>
+                  <p class="tap__item b-04"><span>에코백스</span></p>
+                  <p class="tap__item b-05"><span>브랜드E</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 콘텐츠 컨테이너 // overview // 탭으로 변환되는 콘텐츠 영역-->
+            <div class="cont__container overview">
+              <!-- 아티클 // 1. 소셜 반응 레이더 -->
+              <article class="cont-artic artic--sentiment-meter hFix slideIn delay-2">
+                <div class="artic__inner">
+                  <!-- 컨텐츠 박스 -->
+                  <div class="cont cont--overview">
+                    <div class="cont__inner">
+                      <div class="cont-hd">
+                        <!-- <div class="cont-title">
+                          <span class="icon"></span>
+                          <span class="txt"></span>
+                        </div> -->
+                      </div>
+                      <div class="cont-bd">
+                        <div class="cont-bd__inner">
+                          <div class="bd-top">
+                            <div class="overview-title">
+
+                            </div>
+                          </div>
+                          <div class="bd-main">
+                            <div class="cont-title">
+                              <span class="icon"></span>
+                              <span class="txt">
+                                <em class="normal">AIM은</em>
+                                <em class="color">드리미</em>
+                                <em class="normal">를 이렇게 평가했어요.</em>
+                              </span>
+                            </div>
+                            <div class="bd-container__wrap">
+                              <!-- 긍정 버블 -->
+                              <div class="bd-container positBubble">
+                                <div class="info-wrapper">
+                                  <div id="positive-container" class="info-container"></div>
+                                </div>
+                              </div>
+
+                              <!-- 게이지 -->
+                              <div class="bd-container gauge">
+                                <div class="gauge-container">
+                                  <svg viewBox="0 0 300 150">
+                                    <!-- 피자조각처럼 6개 구간으로 나눈 반원 -->
+                                    <g transform="rotate(-90,150,150)">
+                                      <path d="M150,150 L150,30 A120,120 0 0,1 210.6,49.4 Z" fill="#4caf50" />
+                                      <path d="M150,150 L210.6,49.4 A120,120 0 0,1 247.5,90 Z" fill="#8bc34a" />
+                                      <path d="M150,150 L247.5,90 A120,120 0 0,1 247.5,150 Z" fill="#cddc39" />
+                                      <path d="M150,150 L247.5,150 A120,120 0 0,1 210.6,210.6 Z" fill="#ffeb3b" />
+                                      <path d="M150,150 L210.6,210.6 A120,120 0 0,1 150,270 Z" fill="#ff9800" />
+                                      <path d="M150,150 L150,270 A120,120 0 0,1 89.4,210.6 Z" fill="#f44336" />
+                                    </g>
+
+                                    <!-- 바늘 -->
+                                    <line id="needle" x1="150" y1="150" x2="150" y2="40" stroke="black" stroke-width="4"
+                                      class="needle" />
+                                    <circle cx="150" cy="150" r="5" fill="black" />
+                                  </svg>
+
+                                  <div class="labels">
+                                    <span>-100%</span>
+                                    <!-- <span>0%</span> -->
+                                    <span>100%</span>
+                                  </div>
+                                  <div class="value" id="current-value">현재: 0%</div>
+                                </div>
+
+                                <div class="bar-container">
+                                  <div class="bar">
+                                    <span class="positive" id="bar-positive" style="width: 40%"></span>
+                                    <span class="neutral" id="bar-neutral" style="width: 30%"></span>
+                                    <span class="negative" id="bar-negative" style="width: 30%"></span>
+                                  </div>
+                                  <div class="bar-labels">
+                                    <div id="val-positive">긍정: 40%</div>
+                                    <div id="val-neutral">중립: 30%</div>
+                                    <div id="val-negative">부정: 30%</div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 부정 버블 -->
+                              <div class="bd-container negatBubble">
+                                <div class="info-wrapper">
+                                  <div id="negative-container" class="info-container"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="./src/js/jquery-3.5.1.js"></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/main.js"></script>
+
+  <script>
+    function setNeedle(percent) {
+      // percent: -100 ~ 100 → angle: -90 ~ 90도
+      const angle = (percent / 100) * 90;
+      document.getElementById("needle").style.transform = `rotate(${angle}deg)`;
+      document.getElementById("current-value").textContent = `현재: ${percent}%`;
+    }
+
+    function setBarValues(pos, neu, neg) {
+      const total = pos + neu + neg;
+      document.getElementById("bar-positive").style.width = `${(pos / total) * 100}%`;
+      document.getElementById("bar-neutral").style.width = `${(neu / total) * 100}%`;
+      document.getElementById("bar-negative").style.width = `${(neg / total) * 100}%`;
+
+      document.getElementById("val-positive").textContent = `긍정: ${Math.round((pos / total) * 100)}%`;
+      document.getElementById("val-neutral").textContent = `중립: ${Math.round((neu / total) * 100)}%`;
+      document.getElementById("val-negative").textContent = `부정: ${Math.round((neg / total) * 100)}%`;
+    }
+
+    // 예시 적용
+    setNeedle(-10); // -100 ~ 100
+    setBarValues(40, 30, 30);
+
+
+
+
+
+
+    /////////////////////
+    function runBubbleSystem(containerId, sentences, typeClass) {
+      const container = document.getElementById(containerId);
+      const containerSizeX = 462;
+      const containerSizeY = 450;
+      const bubbles = [];
+      let index = 0;
+
+      function checkOverlap(newBubble) {
+        const r1 = newBubble.getBoundingClientRect();
+        return bubbles.some(b => {
+          const r2 = b.getBoundingClientRect();
+          return !(
+            r1.right + 3 < r2.left ||
+            r1.left - 3 > r2.right ||
+            r1.bottom + 3 < r2.top ||
+            r1.top - 3 > r2.bottom
+          );
+        });
+      }
+
+      function removeOldestBubble(callback) {
+        const old = bubbles.shift();
+        if (!old) {
+          if (callback) callback();
+          return;
+        }
+        old.classList.remove('fade-in');
+        void old.offsetWidth;
+        old.classList.add('fade-out');
+        setTimeout(() => {
+          old.remove();
+          if (callback) callback();
+        }, 600);
+      }
+
+      function createBubble(text) {
+        const bubble = document.createElement('div');
+        bubble.className = `info-bubble ${typeClass}`;
+        bubble.textContent = text;
+        container.appendChild(bubble);
+        bubble.style.maxWidth = '200px';
+        void bubble.offsetWidth;
+
+        const rect = bubble.getBoundingClientRect();
+        const width = Math.min(rect.width, 200);
+        const height = rect.height;
+
+        let placed = false;
+        for (let i = 0; i < 100; i++) {
+          const x = Math.random() * (containerSizeX - width);
+          const y = Math.random() * (containerSizeY - height);
+          bubble.style.left = `${x}px`;
+          bubble.style.top = `${y}px`;
+          if (!checkOverlap(bubble)) {
+            placed = true;
+            break;
+          }
+        }
+
+        if (placed) {
+          bubble.classList.add('fade-in');
+          bubbles.push(bubble);
+        } else {
+          bubble.remove();
+          removeOldestBubble(() => createBubble(text));
+        }
+      }
+
+      setInterval(() => {
+        const sentence = sentences[index % sentences.length];
+        createBubble(sentence);
+        index++;
+      }, 1500);
+    }
+
+    // 왼쪽: 긍정 only
+    runBubbleSystem("positive-container", [
+      "정말 잘했어요!",
+      "오늘도 최고예요!",
+      "칭찬해요!",
+      "가성비 최고",
+      "긍정 에너지 최고!"
+    ], "positBub");
+
+    // 오른쪽: 부정 only
+    runBubbleSystem("negative-container", [
+      "조금 더 신경 써주세요.",
+      "이 부분은 아쉬워요.",
+      "개선이 필요합니다.",
+      "지연이 발생했어요.",
+      "문제가 발견되었습니다."
+    ], "negatBub");
+  </script>
+</body>
+
+</html>

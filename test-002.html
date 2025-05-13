@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>요끼의 긍정/부정 버블 UI</title>
+  <style>
+    .info-wrapper {
+      display: flex;
+      gap: 40px;
+    }
+
+    .info-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      background: #f4f4f4;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-bubble {
+      position: absolute;
+      max-width: 200px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      box-sizing: border-box;
+      text-align: center;
+      white-space: normal;
+      word-break: keep-all;
+      line-height: 1.4;
+      cursor: default;
+
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.4s ease;
+    }
+
+    .info-bubble.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .info-bubble.fade-out {
+      opacity: 0;
+    }
+
+    .info-bubble:hover {
+      transform: translateY(0) scale(1.05);
+      z-index: 2;
+    }
+
+    .posit {
+      background: #d2f8ce;
+      color: #245c1d;
+    }
+
+    .negat {
+      background: #ffe0e0;
+      color: #7d1f1f;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="info-wrapper">
+    <div id="positive-container" class="info-container"></div>
+    <div id="negative-container" class="info-container"></div>
+  </div>
+
+  <script>
+    function runBubbleSystem(containerId, sentences, typeClass) {
+      const container = document.getElementById(containerId);
+      const containerSize = 600;
+      const bubbles = [];
+      let index = 0;
+
+      function checkOverlap(newBubble) {
+        const r1 = newBubble.getBoundingClientRect();
+        return bubbles.some(b => {
+          const r2 = b.getBoundingClientRect();
+          return !(
+            r1.right + 3 < r2.left ||
+            r1.left - 3 > r2.right ||
+            r1.bottom + 3 < r2.top ||
+            r1.top - 3 > r2.bottom
+          );
+        });
+      }
+
+      function removeOldestBubble(callback) {
+        const old = bubbles.shift();
+        if (!old) {
+          if (callback) callback();
+          return;
+        }
+        old.classList.remove('fade-in');
+        void old.offsetWidth;
+        old.classList.add('fade-out');
+        setTimeout(() => {
+          old.remove();
+          if (callback) callback();
+        }, 600);
+      }
+
+      function createBubble(text) {
+        const bubble = document.createElement('div');
+        bubble.className = `info-bubble ${typeClass}`;
+        bubble.textContent = text;
+        container.appendChild(bubble);
+        bubble.style.maxWidth = '200px';
+        void bubble.offsetWidth;
+
+        const rect = bubble.getBoundingClientRect();
+        const width = Math.min(rect.width, 200);
+        const height = rect.height;
+
+        let placed = false;
+        for (let i = 0; i < 100; i++) {
+          const x = Math.random() * (containerSize - width);
+          const y = Math.random() * (containerSize - height);
+          bubble.style.left = `${x}px`;
+          bubble.style.top = `${y}px`;
+          if (!checkOverlap(bubble)) {
+            placed = true;
+            break;
+          }
+        }
+
+        if (placed) {
+          bubble.classList.add('fade-in');
+          bubbles.push(bubble);
+        } else {
+          bubble.remove();
+          removeOldestBubble(() => createBubble(text));
+        }
+      }
+
+      setInterval(() => {
+        const sentence = sentences[index % sentences.length];
+        createBubble(sentence);
+        index++;
+      }, 1500);
+    }
+
+    // 왼쪽: 긍정 only
+    runBubbleSystem("positive-container", [
+      "정말 잘했어요!",
+      "오늘도 최고예요!",
+      "칭찬해요!",
+      "가성비 최고",
+      "긍정 에너지 최고!"
+    ], "posit");
+
+    // 오른쪽: 부정 only
+    runBubbleSystem("negative-container", [
+      "조금 더 신경 써주세요.",
+      "이 부분은 아쉬워요.",
+      "개선이 필요합니다.",
+      "지연이 발생했어요.",
+      "문제가 발견되었습니다."
+    ], "negat");
+  </script>
+</body>
+
+</html>

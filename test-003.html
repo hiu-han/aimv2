@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>게이지 차트</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .gauge-container {
+      position: relative;
+      width: 300px;
+      height: 150px;
+      margin: 0 auto;
+    }
+
+    .gauge-arc {
+      width: 100%;
+      height: 100%;
+      background: conic-gradient(#ff4d4d 0% 16.66%,
+          #ff9900 16.66% 33.33%,
+          #ffff66 33.33% 50%,
+          #99ff99 50% 66.66%,
+          #66ccff 66.66% 83.33%,
+          #9966cc 83.33% 100%);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      transform: rotate(-90deg);
+      overflow: hidden;
+    }
+
+    .needle {
+      position: absolute;
+      width: 4px;
+      height: 80px;
+      background: red;
+      top: 70px;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .gauge-labels {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    .current-value {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .bar-container {
+      margin-top: 50px;
+      width: 100%;
+      max-width: 400px;
+      margin-inline: auto;
+    }
+
+    .bar {
+      display: flex;
+      height: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+    }
+
+    .positive {
+      background: #4caf50;
+    }
+
+    .neutral {
+      background: #ffeb3b;
+    }
+
+    .negative {
+      background: #f44336;
+    }
+
+    .bar-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+
+    .bar-labels div {
+      width: 33.3%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gauge-container">
+    <div class="gauge-arc"></div>
+    <div class="needle" id="needle"></div>
+    <div class="gauge-labels">
+      <span>-100%</span>
+      <span>0%</span>
+      <span>100%</span>
+    </div>
+    <div class="current-value" id="current-value">현재: 0%</div>
+  </div>
+
+  <div class="bar-container">
+    <div class="bar">
+      <span class="positive" id="bar-positive" style="width: 40%"></span>
+      <span class="neutral" id="bar-neutral" style="width: 30%"></span>
+      <span class="negative" id="bar-negative" style="width: 30%"></span>
+    </div>
+    <div class="bar-labels">
+      <div id="val-positive">긍정: 40%</div>
+      <div id="val-neutral">중립: 30%</div>
+      <div id="val-negative">부정: 30%</div>
+    </div>
+  </div>
+
+  <script>
+    function setGaugeValue(percent) {
+      const needle = document.getElementById("needle");
+      const display = document.getElementById("current-value");
+      const angle = (percent + 100) * 0.9; // -100~100 → 0~180deg
+      needle.style.transform = `rotate(${angle - 90}deg)`;
+      display.textContent = `현재: ${percent}%`;
+    }
+
+    function setBarValues(pos, neu, neg) {
+      const total = pos + neu + neg;
+      document.getElementById("bar-positive").style.width = `${(pos / total) * 100}%`;
+      document.getElementById("bar-neutral").style.width = `${(neu / total) * 100}%`;
+      document.getElementById("bar-negative").style.width = `${(neg / total) * 100}%`;
+
+      document.getElementById("val-positive").textContent = `긍정: ${Math.round((pos / total) * 100)}%`;
+      document.getElementById("val-neutral").textContent = `중립: ${Math.round((neu / total) * 100)}%`;
+      document.getElementById("val-negative").textContent = `부정: ${Math.round((neg / total) * 100)}%`;
+    }
+
+    // 예시 값 설정
+    setGaugeValue(50); // -100% ~ 100%
+    setBarValues(40, 30, 30); // 긍정, 중립, 부정
+  </script>
+
+</body>
+
+</html>

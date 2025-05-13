@@ -1,0 +1,336 @@
+<!-- AI REPORT // 브랜드별 언급량 비교, 감성 분석 비교, AI 인사이트 요약 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="버즈 에임">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="Buzz Aim">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <meta rel="icon" type="image/x-icon" href="./favicon.ico" size="16x16">
+  <title>Buzz Aim</title>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <div id="wrap" class="page-wrap ai-report-page">
+    <div id="header" class="slideIn"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <div id="aside">
+          <aside class="side-bar">
+            <div class="menu__wrap">
+              <ul class="menu__list">
+                <li id="menu01" class="menu__item">
+                  <a href="./index.html">
+                    <em class="icon"></em>
+                    <span class="name">OVERVIEW</span>
+                  </a>
+                </li>
+                <li id="menu02" class="menu__item">
+                  <a href="./brand.html">
+                    <em class="icon"></em>
+                    <span class="name">INDEX</span>
+                  </a>
+                </li>
+                <li id="menu03" class="menu__item">
+                  <a href="./issue.html">
+                    <em class="icon"></em>
+                    <span class="name">ISSUE</span>
+                  </a>
+                </li>
+                <li id="menu04" class="menu__item">
+                  <a href="./persona.html">
+                    <em class="icon"></em>
+                    <span class="name">PERSONA</span>
+                  </a>
+                </li>
+                <li id="menu05" class="menu__item on">
+                  <a href="./aiReport.html">
+                    <em class="icon"></em>
+                    <span class="name">AI</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 콘텐츠 레이아웃 섹션 // 콘텐츠 외부 박스 // 본 페이지 내 1개 고정 -->
+        <section class="layout-sect sec--center">
+          <div class="sect__inner">
+
+            <!-- 콘텐츠 컨테이너 // AI 리포트 -->
+            <div class="cont__container ai">
+              <!-- 아티클 // 1. 브랜드별 언급량 비교 -->
+              <article class="cont-artic artic--ai01 hFix full slideIn delay-1">
+                <div class="artic__inner">
+                  <div class="cont cont--ai">
+                    <div class="cont__inner">
+                      <!-- cont-hd // 좌측 사이드 메뉴 -->
+                      <div class="cont-hd hd--side">
+                        <!-- 대화 리스트 -->
+                        <div class="record__wrap">
+                          <div class="record-new">
+                            <div class="record__item new">
+                              <a href="">
+                                <span class="txt">+ 새 대화 시작하기</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="record-prev">
+                            <ul class="record__list">
+                              <li class="record__item">
+                                <a href="">
+                                  <span class="txt">250506_1311 대화</span>
+                                </a>
+                              </li>
+                              <li class="record__item">
+                                <a href="">
+                                  <span class="txt">250506_1631 대화</span>
+                                </a>
+                              </li>
+                              <li class="record__item">
+                                <a href="">
+                                  <span class="txt">250507_1006 대화</span>
+                                </a>
+                              </li>
+                              <li class="record__item">
+                                <a href="">
+                                  <span class="txt">250507_1354 대화</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- 답변 페르소나 리스트 -->
+                        <div class="pers__wrap">
+                          <ul class="pers__list">
+                            <!-- 페르소나 // type-oo <- 페르소나 명칭 구분 -->
+                            <li class="pers__item type-01">
+                              <a href="">
+                                <em class="icon"></em>
+                                <span class="txt">페르소나_01</span>
+                              </a>
+                            </li>
+                            <li class="pers__item type-02">
+                              <a href="">
+                                <em class="icon"></em>
+                                <span class="txt">페르소나_02</span>
+                              </a>
+                            </li>
+                            <li class="pers__item type-03">
+                              <a href="">
+                                <em class="icon"></em>
+                                <span class="txt">페르소나_03</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!-- cont-bd // 대화 컨텐츠 영역 -->
+                      <div class="cont-bd bd--side">
+                        <div class="cont-bd__inner">
+                          <!-- ai report 시작 버튼 -->
+                          <div class="start__wrap">
+                            <div class="start-opt">
+                              <ul class="obj--clck__list opt__list">
+                                <li class="obj--clck opt__item brand">
+                                  <a href="javascript:void(0)">
+                                    <div class="item__inner">
+                                      <p class="opt-name">브랜드 현황 분석 시작하기</p>
+                                      <p class="opt-desc">
+                                        <span class="txt">#경쟁사비교</span>
+                                        <span class="txt">#이슈체크</span>
+                                      </p>
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="obj--clck opt__item issue">
+                                  <a href="javascript:void(0)">
+                                    <div class="item__inner">
+                                      <p class="opt-name">이슈 분석 시작하기</p>
+                                      <p class="opt-desc">
+                                        <span class="txt">#개선점파악</span>
+                                        <span class="txt">#USP분석</span>
+                                      </p>
+                                    </div>
+                                  </a>
+                                </li>
+                                <li class="obj--clck opt__item profile">
+                                  <a href="javascript:void(0)">
+                                    <div class="item__inner">
+                                      <p class="opt-name">프로파일 분석 시작하기</p>
+                                      <p class="opt-desc">
+                                        <span class="txt">#페르소나생성</span>
+                                        <span class="txt">#타겟선정</span>
+                                      </p>
+                                    </div>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- ai 대화 -->
+                          <div class="conv__wrap">
+                            <div class="conv scrbar">
+                              <div class="conv__list">
+                                <!-- 말풍선 // ai -->
+                                <div class="conv__box ai">
+                                  <div class="conv-subs">
+                                    ai의 말이 노출되는 영역<br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel possimus
+                                    quisquam quasi error neque esse minus tenetur, consequuntur numquam ea, id dolorum
+                                    amet incidunt hic blanditiis odio aliquid impedit est. Natus itaque odio aspernatur
+                                    rem laborum et. Consequatur nam hic itaque suscipit doloremque sint pariatur
+                                    obcaecati sed esse fugiat.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore rem cupiditate quas
+                                    quod quia praesentium illum quidem excepturi ea? Explicabo quo quod impedit culpa
+                                    labore. Perferendis vel enim officia cumque!
+                                  </div>
+                                </div>
+
+                                <!-- 말풍선 // user -->
+                                <div class="conv__box user">
+                                  <div class="conv-subs">
+                                    <!-- user 요청 버튼 -->
+                                    <ul class="prompt__list">
+                                      <!-- 이미 답변을 내린 요청 버튼은 addClass .selected >> 비활성화(css 작업 예정) -->
+                                      <li class="obj--clck prompt__item brand selected">
+                                        <button>브랜드 현황 분석 요청</button>
+                                      </li>
+                                      <li class="obj--clck prompt__item issue">
+                                        <button>이슈 분석 요청</button>
+                                      </li>
+                                      <li class="obj--clck prompt__item profile">
+                                        <button>프로파일 분석 요청</button>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+
+                                <!-- 요약 // ai의 답변 3회 이후마다 자동 생성 -->
+                                <div class="conv__box summary">
+                                  <div class="conv-subs">
+                                    앞서 분석한 내용을 담는 영역<br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet omnis reprehenderit
+                                    totam nihil nam dignissimos ut, vitae ipsum nesciunt atque tempore rerum
+                                    exercitationem quibusdam blanditiis nobis sequi sit vero alias ex culpa suscipit
+                                    incidunt quia? Quo delectus nemo facilis, error aspernatur dignissimos excepturi in
+                                    quam cum nulla vitae, unde distinctio voluptatum reprehenderit ipsa maxime a quod
+                                    impedit culpa inventore expedita? Est, ducimus tempora sit amet at ipsa voluptas ea
+                                    vero.<br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nostrum harum,
+                                    praesentium, laborum, id suscipit eum labore delectus molestias fugiat explicabo
+                                    illum accusamus ipsa nesciunt ut pariatur quod. Enim, id?<br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At quo sequi similique.
+                                    Repellendus deserunt, nihil quasi inventore enim cumque odio minus quisquam vel modi
+                                    suscipit est unde! Saepe iure minus debitis? Suscipit aliquam consequatur neque
+                                    soluta minus illum eveniet quas?
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 추가 기능 -->
+                          <div class="addit__wrap">
+                            <!-- 대화 시작 전 추가 옵셥 -->
+                            <ul class="obj--clck__list addit__list start">
+                              <li class="obj--clck addit__item integ">
+                                <button>전체 현황 통합 분석하기</button>
+                              </li>
+                            </ul>
+
+                            <!-- 대화 중 추가 옵션 -->
+                            <ul class="obj--clck__list addit__list after">
+                              <li class="obj--clck addit__item typeName">
+                                <button>추가 분석 제안<br>(e.g:채널 운영 전략 수립)</button>
+                              </li>
+                              <li class="obj--clck addit__item typeName">
+                                <button>추가 분석 제안<br>(e.g:캠페인 효과 분석)</button>
+                              </li>
+                              <li class="obj--clck addit__item typeName">
+                                <button>추가 분석 제안</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <aside class="modal__container ai">
+      <!-- 모달 배경 -->
+      <div class="modal-bg"></div>
+      <!-- 모달 // ai starter -->
+      <div class="modal ai" id="aiStarter">
+        <div class="modal-hd">
+          <p class="modal-msg">
+            * 현재 조회된 정보를 토대로 대화가 시작됩니다.
+          </p>
+        </div>
+        <div class="modal-bd">
+          <div class="bd__inner">
+            <div class="info__wrap">
+              <div class="info-item date">
+                <p class="name">조회 기간</p>
+                <p class="date">
+                  <span class="start">2025.05.01</span>
+                  <span class="end">2025.05.03</span>
+                </p>
+              </div>
+              <div class="info-item channel">
+                <p class="name">조회 채널</p>
+                <div class="channel">
+                  <p>
+                    네이버카페, 네이버블로그, 트위터
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn__wrap modal">
+          <p class="btn btn--ty02">
+            <button>취소</button>
+          </p>
+          <p class="btn btn--ty02">
+            <button>시작하기</button>
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="./src/js/jquery-3.5.1.js"></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/main.js"></script>
+
+  <script>
+    // function preventClick(e) {
+    //   e.preventDefault();
+    // };
+  </script>
+</body>
+
+</html>

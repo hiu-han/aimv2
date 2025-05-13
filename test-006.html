@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>6구간 반원 게이지</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fef7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .gauge-wrapper {
+      width: 300px;
+      height: 160px;
+      position: relative;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .gauge-value {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      text-align: center;
+    }
+
+    .gauge-value .percent {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .gauge-value .label {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gauge-wrapper">
+    <svg viewBox="0 0 300 150">
+      <!-- 공통 경로 정의 -->
+      <defs>
+        <path id="arcPath" d="M 30 150 A 120 120 0 0 1 270 150" />
+      </defs>
+
+      <!-- 6구간 배경 (톤다운된 색상) -->
+      <use href="#arcPath" stroke="#a8d5a2" stroke-width="20" stroke-dasharray="62.8 314.2" stroke-dashoffset="0"
+        fill="none" />
+      <use href="#arcPath" stroke="#cde69b" stroke-width="20" stroke-dasharray="62.8 314.2" stroke-dashoffset="-62.8"
+        fill="none" />
+      <use href="#arcPath" stroke="#e4ea94" stroke-width="20" stroke-dasharray="62.8 314.2" stroke-dashoffset="-125.6"
+        fill="none" />
+      <use href="#arcPath" stroke="#fff59d" stroke-width="20" stroke-dasharray="62.8 314.2" stroke-dashoffset="-188.4"
+        fill="none" />
+      <use href="#arcPath" stroke="#ffc98c" stroke-width="20" stroke-dasharray="62.8 314.2" stroke-dashoffset="-251.2"
+        fill="none" />
+      <use href="#arcPath" stroke="#f8b0aa" stroke-width="20" stroke-dasharray="62.8 314.2" stroke-dashoffset="-314"
+        fill="none" />
+
+      <!-- 실제 수치 게이지 -->
+      <path id="arc" d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#000" stroke-width="20"
+        stroke-linecap="round" stroke-dasharray="377" stroke-dashoffset="377" />
+
+      <!-- 핸들 -->
+      <circle id="handle" cx="30" cy="150" r="10" fill="#fff" stroke="#000" stroke-width="4" />
+    </svg>
+
+    <div class="gauge-value">
+      <div class="percent" id="percent-text">0%</div>
+      <div class="label">Employee Satisfactory</div>
+    </div>
+  </div>
+
+  <script>
+    const COLOR_SET = [
+      { bg: '#a8d5a2', active: '#388e3c' },  // 0~16%
+      { bg: '#cde69b', active: '#689f38' },  // 17~33%
+      { bg: '#e4ea94', active: '#afb42b' },  // 34~50%
+      { bg: '#fff59d', active: '#fbc02d' },  // 51~66%
+      { bg: '#ffc98c', active: '#fb8c00' },  // 67~83%
+      { bg: '#f8b0aa', active: '#e53935' }   // 84~100%
+    ];
+
+    function getColor(percent) {
+      if (percent <= 16) return COLOR_SET[0];
+      if (percent <= 33) return COLOR_SET[1];
+      if (percent <= 50) return COLOR_SET[2];
+      if (percent <= 66) return COLOR_SET[3];
+      if (percent <= 83) return COLOR_SET[4];
+      return COLOR_SET[5];
+    }
+
+    function setGauge(percent) {
+      const arc = document.getElementById("arc");
+      const handle = document.getElementById("handle");
+      const text = document.getElementById("percent-text");
+
+      const clamped = Math.max(0, Math.min(100, percent));
+      const pathLength = 377;
+      const offset = pathLength * (1 - clamped / 100);
+
+      const color = getColor(clamped).active;
+
+      arc.style.strokeDashoffset = offset;
+      arc.setAttribute("stroke", color);
+      handle.setAttribute("stroke", color);
+      handle.setAttribute("fill", color);
+      text.textContent = clamped + "%";
+
+      // 핸들 위치 계산
+      const angleDeg = (clamped / 100) * 180;
+      const angleRad = (angleDeg * Math.PI) / 180;
+      const r = 120;
+      const cx = 150 - r * Math.cos(angleRad);
+      const cy = 150 - r * Math.sin(angleRad);
+      handle.setAttribute("cx", cx);
+      handle.setAttribute("cy", cy);
+    }
+
+    // 예시 수치
+    setGauge(80);
+  </script>
+
+</body>
+
+</html>

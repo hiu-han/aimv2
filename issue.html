@@ -1,0 +1,542 @@
+<!-- 이슈 인사이트 // 브랜드별 주요 이슈, AI가 본 이슈별 평가 요인 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="버즈 에임">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="Buzz Aim">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <meta rel="icon" type="image/x-icon" href="./favicon.ico" size="16x16">
+  <title>Buzz Aim</title>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <div id="wrap" class="page-wrap issue-page">
+    <div id="header" class="slideIn"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <div id="aside">
+          <aside class="side-bar">
+            <div class="menu__wrap">
+              <ul class="menu__list">
+                <li id="menu01" class="menu__item">
+                  <a href="./index.html">
+                    <em class="icon"></em>
+                    <span class="name">OVERVIEW</span>
+                  </a>
+                </li>
+                <li id="menu02" class="menu__item">
+                  <a href="./brand.html">
+                    <em class="icon"></em>
+                    <span class="name">INDEX</span>
+                  </a>
+                </li>
+                <li id="menu03" class="menu__item on">
+                  <a href="./issue.html">
+                    <em class="icon"></em>
+                    <span class="name">ISSUE</span>
+                  </a>
+                </li>
+                <li id="menu04" class="menu__item">
+                  <a href="./persona.html">
+                    <em class="icon"></em>
+                    <span class="name">PERSONA</span>
+                  </a>
+                </li>
+                <li id="menu05" class="menu__item">
+                  <a href="./aiReport.html">
+                    <em class="icon"></em>
+                    <span class="name">AI</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 콘텐츠 레이아웃 섹션 // 콘텐츠 외부 박스 // 본 페이지 내 1개 고정 -->
+        <section class="layout-sect sec--center">
+          <div class="sect__inner">
+            <!-- 섹션 탑 -->
+            <div class="sect-top">
+              <!-- 브랜드 탭 // 브랜드 택1 -->
+              <div class="top-element brand-tab slideIn delay-1">
+                <div class="tap__list in">
+                  <p class="tap__item b-01 on"><span>로보락</span></p>
+                  <p class="tap__item b-02"><span>드리미</span></p>
+                  <p class="tap__item b-03"><span>삼성 스팀</span></p>
+                  <p class="tap__item b-04"><span>에코백스</span></p>
+                  <p class="tap__item b-05"><span>브랜드E</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 콘텐츠 컨테이너 // 이슈 인사이트 -->
+            <!-- <div class="cont__container issue added"> -->
+            <div class="cont__container issue">
+
+              <!-- 아티클 // 1. 주제별 언급량 -->
+              <article class="cont-artic artic--issue01 hFix slideIn scrIn delay-2">
+                <div class="artic__inner scrbar0">
+                  <!-- 컨텐츠 박스  -->
+                  <div class="cont cont--issue">
+                    <div class="cont__inner">
+                      <div class="cont-hd">
+                        <div class="cont-title">
+                          <span class="name">로보락</span><span class="txt">에 대한 반응을 보여드릴게요!</span>
+                        </div>
+                      </div>
+                      <div class="cont-bd">
+                        <div class="cont-bd__inner">
+                          <!-- 주제 분석 // 주제어 -->
+                          <div class="topic__wrap topic">
+                            <div class="topic__list-hd scrIn-hd">
+                              <p class="hd__item topic">주제</p>
+                              <p class="hd__item amount">언급량</p>
+                              <p class="hd__item emot">감성평가</p>
+                            </div>
+                            <div class="topic__list scrbar">
+                              <div class="list__inner scrIn-subs">
+                                <!-- 주제 A -->
+                                <div class="topic__group">
+                                  <div class="topic__item l-ctgry on">
+                                    <p class="topic-element topic">에코백스</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount">
+                                          <span class="count">231</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot posit"><span>13.7</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">옴니</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount">
+                                          <span class="count">26</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot posit"><span>23.7</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">n30</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount">
+                                          <span class="count">40</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot negat"><span>-9.7</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">삼성 로봇청소기</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount">
+                                          <span class="count">19</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot posit"><span>7.7</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">t30</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount">
+                                          <span class="count">34</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot negat"><span>-13.7</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">t509</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount">
+                                          <span class="count">51</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot negat"><span>-13.7</span></p>
+                                  </div>
+                                </div>
+                                <!-- 주제 B -->
+                                <div class="topic__group">
+                                  <div class="topic__item l-ctgry">
+                                    <p class="topic-element topic">주제 B</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot negat"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry on">
+                                    <p class="topic-element topic">주제 B-1</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot negat"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 B-2</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot posit"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 B-3</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot negat"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 B-4</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot posit"><span>77.7%</span></p>
+                                  </div>
+                                </div>
+                                <!-- 주제 C -->
+                                <div class="topic__group">
+                                  <div class="topic__item l-ctgry">
+                                    <p class="topic-element topic">주제 C</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-1</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-2</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-3</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 C-4</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                </div>
+                                <!-- 주제 D -->
+                                <div class="topic__group">
+                                  <div class="topic__item l-ctgry">
+                                    <p class="topic-element topic">주제 D</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 D-1</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 D-2</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 D-3</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                  <div class="topic__item s-ctgry">
+                                    <p class="topic-element topic">주제 D-4</p>
+                                    <div class="topic-element amount">
+                                      <div class="gauge--100">
+                                        <p class="gauge--amount"></p>
+                                      </div>
+                                    </div>
+                                    <p class="topic-element emot"><span>77.7%</span></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 아티클 // 2. 긍부정 샘플 원문 -->
+              <article class="cont-artic artic--issue02 hFix slideIn delay-3">
+                <div class="artic__inner scrbar0">
+                  <!-- 컨텐츠 박스 -->
+                  <div class="cont cont--issue-detail">
+                    <div class="cont__inner">
+                      <div class="cont-bd">
+                        <div class="cont-bd__inner">
+                          <!-- 주제 분석 // 내용 -->
+                          <div class="topic__wrap detail">
+                            <!-- <div class="wrap-name"><span class="strong">에코벡스</span>에 대한 반응</div> -->
+                            <div class="wrap-name">
+                              <span class="icon">💬</span>
+                              <span>
+                                <strong id="detailTopicName" class="color">에코백스</strong>
+                                에 대한 반응
+                              </span>
+                            </div>
+                            <!-- 주제 분석 // 내용 // 긍정 -->
+                            <div class="topic-detail__box">
+                              <div class="topic-detail posit">
+                                <div class="topic-detail__list posit">
+                                  <div class="list__inner">
+                                    <p class="detail__item">
+                                      <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 주제 분석 // 내용 // 부정 -->
+                              <div class="topic-detail negat">
+                                <div class="topic-detail__list negat">
+                                  <div class="list__inner">
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                    <p class="detail__item">
+                                      <span>블라블라아ㅓ리어ㅣㅏ러ㅣ너 ㅣ런야러냐ㅓㅇ리넝리ㅓ니어린어ㅣㅏ러ㅣ처럼 보인다.</span>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 아티클 // 3. 원글 목록 -->
+              <article class="cont-artic artic--issue03 hFix">
+                <div class="artic__inner scrbar0">
+                  <!-- 컨텐츠 박스 -->
+                  <div class="cont cont--issue-subs">
+                    <div class="cont__inner">
+                      <div class="cont-hd">
+                        <div class="cont-title">
+                          <em class="icon">📨</em>
+                          <span class="txt">원문 보기</span>
+                        </div>
+                      </div>
+                      <div class="cont-bd">
+                        <div class="cont-bd__inner">
+                          <!-- 주제 분석 // 원글 보기 -->
+                          <div class="topic__wrap origin">
+                            <div class="origin-top">
+                              <div class="origin-sources">
+                                <span class="txt">BLOG / 네이버</span>
+                              </div>
+                              <div class="origin-title">
+                                <p class="title">물걸레 로봇청소기 추천 드리미 X50 후기</p>
+                              </div>
+                              <div class="origin-writter">
+                                <p class="date">
+                                  <span class="icon">📆</span>
+                                  <span class="num">2025. 4. 28</span>
+                                </p>
+                                <p class="name">
+                                  <span class="icon">🙋</span>
+                                  <span class="txt">dark172</span>
+                                </p>
+                              </div>
+                              <div class="origin-url">
+                                <div class="url-subs">
+                                  <div class="subs-top">
+                                    <p class="subs-title">URL</p>
+                                    <div class="top-opt">
+                                      <p class="btn btn--icon">
+                                        <button>복사</button>
+                                      </p>
+                                      <p class="btn btn--icon">
+                                        <button>링크</button>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <p class="url">
+                                    <a
+                                      href="https://blog.naver.com/dark172/223848725996">https://blog.naver.com/dark172/223848725996</a>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="origin-main">
+                              <div class="origin-subs scrbar">
+                                <div class="subs__inner">
+                                  <p class="subs-title">원문 내용</p>
+                                  <div class="subs-txt">
+                                    <!-- 원문 메세지 -->
+                                    소셜 미디어(SNS)는 현대인의 일상에서 분리할 수 없는 부분이 되었습니다. 그중 인스타그램은 전 세계 20억 명 이상의 사용자를 보유하며, 특히
+                                    10-20대에게 가장 사랑받는 플랫폼 중 하나로 자리 잡았습니다.
+                                    소셜 미디어(SNS)는 현대인의 일상에서 분리할 수 없는 부분이 되었습니다. 그중 인스타그램은 전 세계 20억 명 이상의 사용자를 보유하며, 특히
+                                    10-20대에게 가장 사랑받는 플랫폼 중 하나로 자리 잡았습니다.
+                                    소셜 미디어(SNS)는 현대인의 일상에서 분리할 수 없는 부분이 되었습니다. 그중 인스타그램은 전 세계 20억 명 이상의 사용자를 보유하며, 특히
+                                    10-20대에게 가장 사랑받는 플랫폼 중 하나로 자리 잡았습니다.
+                                    그러나 10대 사용자의 지나친 SNS 사용은 유해한 콘텐츠 노출 및 정신건강과 관련된 여러 가지 우려를 동반합니다. 이에 인스타그램은 18세 미만
+                                    사용자를 보호하고자
+                                    (Teen Accounts)>이라는 새로운 기능을 도입했습니다. 지난 9월 17일 발표된 이 업데이트에 따르면 앞으로 모든 10대용 계정이 비공개
+                                    계정으로 전환됩니다. 부모의 감독 아래 10대들이 더 안전한 디지털 경험을 하기 위한 조치라고 하네요.
+                                    (Teen Accounts)>이라는 새로운 기능을 도입했습니다. 지난 9월 17일 발표된 이 업데이트에 따르면 앞으로 모든 10대용 계정이 비공개
+                                    계정으로 전환됩니다. 부모의 감독 아래 10대들이 더 안전한 디지털 경험을 하기 위한 조치라고 하네요.
+                                    (Teen Accounts)>이라는 새로운 기능을 도입했습니다. 지난 9월 17일 발표된 이 업데이트에 따르면 앞으로 모든 10대용 계정이 비공개
+                                    계정으로 전환됩니다. 부모의 감독 아래 10대들이 더 안전한 디지털 경험을 하기 위한 조치라고 하네요.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="./src/js/jquery-3.5.1.js"></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/main.js"></script>
+
+  <script>
+    $(function () {
+      $(".detail__item").click(function () {
+        $(".cont__container").addClass("added");
+        $(".detail__item").removeClass("on");
+        $(this).addClass("on");
+      })
+    })
+  </script>
+</body>
+
+</html>

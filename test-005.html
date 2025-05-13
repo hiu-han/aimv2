@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>가로 반원형 게이지</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fef7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .gauge-wrapper {
+      width: 300px;
+      height: 160px;
+      position: relative;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .gauge-value {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      text-align: center;
+    }
+
+    .gauge-value .percent {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .gauge-value .label {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gauge-wrapper">
+    <svg viewBox="0 0 300 150">
+      <!-- 회색 배경 반원 -->
+      <path d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="#eee" stroke-width="20" stroke-linecap="round" />
+
+      <!-- 채워지는 게이지 -->
+      <path id="arc" d="M 30 150 A 120 120 0 0 1 270 150" fill="none" stroke="url(#gradient)" stroke-width="20"
+        stroke-linecap="round" stroke-dasharray="377" stroke-dashoffset="377" />
+
+      <!-- 핸들 동그라미 -->
+      <circle id="handle" cx="30" cy="150" r="10" fill="white" stroke="#f8a100" stroke-width="4" />
+
+      <!-- 그라디언트 정의 -->
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="100%">
+          <!-- <stop offset="0%" stop-color="#f8c600" />
+          <stop offset="100%" stop-color="#f8a100" /> -->
+          <stop offset="0%" stop-color="#f44336" />
+          <stop offset="100%" stop-color="#4caf50" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="gauge-value">
+      <div class="percent" id="percent-text">0%</div>
+      <div class="label">Employee Satisfactory</div>
+    </div>
+  </div>
+
+  <script>
+    function setGauge(percent) {
+      const arc = document.getElementById("arc");
+      const handle = document.getElementById("handle");
+      const text = document.getElementById("percent-text");
+
+      const clamped = Math.max(0, Math.min(100, percent));
+      const pathLength = 377; // 반원 경로 길이
+      const offset = pathLength * (1 - clamped / 100);
+
+      arc.style.strokeDashoffset = offset;
+      text.textContent = clamped + "%";
+
+      // 각도 계산 (왼쪽부터 오른쪽으로 0~180도)
+      const angleDeg = (clamped / 100) * 180;
+      const angleRad = (angleDeg * Math.PI) / 180;
+      const r = 120;
+      const cx = 150 - r * Math.cos(angleRad); // 중심 x = 150
+      const cy = 150 - r * Math.sin(angleRad); // 중심 y = 150
+
+      handle.setAttribute("cx", cx);
+      handle.setAttribute("cy", cy);
+    }
+
+    // 예시 값
+    setGauge(80);
+  </script>
+
+</body>
+
+</html>

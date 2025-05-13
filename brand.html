@@ -1,0 +1,895 @@
+<!-- 브랜드별 레이더 // 브랜드별 언급량, 버즈 발생 추이, 브랜드별 성향, 성향별 추이, 채널별 현황 -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="버즈 에임">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="Buzz Aim">
+  <meta property="og:image" content="./src/img/common/img-share.png">
+  <meta rel="icon" type="image/x-icon" href="./favicon.ico" size="16x16">
+  <title>Buzz Aim</title>
+
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <div id="wrap" class="page-wrap brand-page">
+    <div id="header" class="slideIn"></div>
+
+    <div id="main">
+      <div class="wrapper">
+        <div id="aside">
+          <aside class="side-bar">
+            <div class="menu__wrap">
+              <ul class="menu__list">
+                <li id="menu01" class="menu__item">
+                  <a href="./index.html">
+                    <em class="icon"></em>
+                    <span class="name">OVERVIEW</span>
+                  </a>
+                </li>
+                <li id="menu02" class="menu__item on">
+                  <a href="./brand.html">
+                    <em class="icon"></em>
+                    <span class="name">INDEX</span>
+                  </a>
+                </li>
+                <li id="menu03" class="menu__item">
+                  <a href="./issue.html">
+                    <em class="icon"></em>
+                    <span class="name">ISSUE</span>
+                  </a>
+                </li>
+                <li id="menu04" class="menu__item">
+                  <a href="./persona.html">
+                    <em class="icon"></em>
+                    <span class="name">PERSONA</span>
+                  </a>
+                </li>
+                <li id="menu05" class="menu__item">
+                  <a href="./aiReport.html">
+                    <em class="icon"></em>
+                    <span class="name">AI</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 콘텐츠 레이아웃 섹션 // 콘텐츠 외부 박스 // 본 페이지 내 1개 고정 -->
+        <section class="layout-sect sec--center">
+          <div class="sect__inner">
+            <!-- 섹션 탑 -->
+            <div class="sect-top">
+              <!-- 브랜트 탭 // 브랜드 다중 선택 -->
+              <div class="top-element brand-tab slideIn delay-1">
+                <div class="tap__list in">
+                  <p class="tap__item b-00 on"><span>전체</span></p>
+                  <p class="tap__item b-01"><span>로보락</span></p>
+                  <p class="tap__item b-02"><span>드리미</span></p>
+                  <p class="tap__item b-03"><span>삼성 스팀</span></p>
+                  <p class="tap__item b-04"><span>에코백스</span></p>
+                  <p class="tap__item b-05"><span>브랜드E</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 콘텐츠 컨테이너 // 브랜드별 레이더 -->
+            <div class="cont__container brand">
+
+              <!-- 아티클 // 1. 브랜드별 언급량, 성향 -->
+              <article class="cont-artic artic--brand01 hFix scrIn slideIn delay-1">
+                <div class="artic__inner scrbar0">
+                  <!-- 컨텐츠 박스 -->
+                  <div class="cont cont--status">
+                    <div class="cont__inner">
+                      <div class="cont-hd">
+                        <div class="cont-title">
+                          <span class="icon">🧐</span>
+                          <span class="txt">브랜드별 현황을 알려드려요!</span>
+                        </div>
+                      </div>
+                      <div class="cont-bd">
+                        <div class="cont-bd__inner">
+                          <div class="brand-list-hd scrIn-hd">
+                            <div class="brand-hd__item">
+                              <div class="hd-item-name"></div>
+                              <div class="hd-item-gauge post">게시글 수</div>
+                              <div class="hd-item-gauge emo">감성 평가</div>
+                            </div>
+                          </div>
+                          <!-- 브랜드 리스트 -->
+                          <div class="brand-list-bd scrbar">
+                            <ul class="brand-list scrIn-subs">
+                              <!-- 브랜드 아이템 // 브핸드 A -->
+                              <li class="brand__item on" id="brandA">
+                                <!-- 브랜드 현황 // 브랜드 A -->
+                                <div class="item--total">
+                                  <div class="item-name">로보락</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts">
+                                        <span class="count">264</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit">
+                                        <span class="count">148</span>
+                                      </p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut">
+                                        <span class="count">23</span>
+                                      </p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat">
+                                        <span class="count">93</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- 채널 리스트 -->
+                                <ul class="sub__list">
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">Youtube</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">3</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">1</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">1</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">1</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 블로그</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">51</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">44</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">2</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">5</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 카페</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">168</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">87</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">15</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">66</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+
+                              <!-- 브랜드 아이템 // 브핸드 B -->
+                              <li class="brand__item on" id="brandB">
+                                <!-- 브랜드 현황 // 브랜드 B -->
+                                <div class="item--total">
+                                  <div class="item-name">드리미</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts">
+                                        <span class="count">91</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit">
+                                        <span class="count">73</span>
+                                      </p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut">
+                                        <span class="count">8</span>
+                                      </p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat">
+                                        <span class="count">10</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- 채널 리스트 -->
+                                <ul class="sub__list">
+                                  <!-- 채널 아이템 // 채널 // 유튜브 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">Youtube</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">4</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">4</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count"></span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count"></span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 블로그</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">51</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">44</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">2</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">5</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 카페</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">168</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">87</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">15</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">66</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+
+                              <!-- 브랜드 아이템 // 브핸드 C -->
+                              <li class="brand__item on" id="brandC">
+                                <!-- 브랜드 현황 // 브랜드 C -->
+                                <div class="item--total">
+                                  <div class="item-name">삼성 스팀</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts">
+                                        <span class="count">91</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit">
+                                        <span class="count">73</span>
+                                      </p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut">
+                                        <span class="count">8</span>
+                                      </p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat">
+                                        <span class="count">10</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- 채널 리스트 -->
+                                <ul class="sub__list">
+                                  <!-- 채널 아이템 // 채널 // 유튜브 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">Youtube</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">4</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">4</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count"></span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count"></span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 블로그</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">51</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">44</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">2</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">5</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 카페</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">168</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">87</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">15</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">66</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+
+                              <!-- 브랜드 아이템 // 브핸드 D -->
+                              <li class="brand__item on" id="brandD">
+                                <!-- 브랜드 현황 // 브랜드 D -->
+                                <div class="item--total">
+                                  <div class="item-name">로보락</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts">
+                                        <span class="count">91</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit">
+                                        <span class="count">73</span>
+                                      </p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut">
+                                        <span class="count">8</span>
+                                      </p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat">
+                                        <span class="count">10</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- 채널 리스트 -->
+                                <ul class="sub__list">
+                                  <!-- 채널 아이템 // 채널 // 유튜브 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">Youtube</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">4</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">4</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count"></span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count"></span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 블로그</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">51</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">44</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">2</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">5</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 카페</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">168</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">87</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">15</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">66</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+
+                              <!-- 브랜드 아이템 // 브핸드 E -->
+                              <li class="brand__item on" id="brandE">
+                                <!-- 브랜드 현황 // 브랜드 E -->
+                                <div class="item--total">
+                                  <div class="item-name">에코백스</div>
+                                  <div class="item-gauge post">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posts // 게시글 수 -->
+                                      <p class="gauge--posts">
+                                        <span class="count">91</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div class="item-gauge emo">
+                                    <!-- gauge--100 // 100% -->
+                                    <div class="gauge--100">
+                                      <!-- gauge--posit // 긍정 -->
+                                      <p class="gauge--posit">
+                                        <span class="count">73</span>
+                                      </p>
+                                      <!-- gauge--neut // 중립 -->
+                                      <p class="gauge--neut">
+                                        <span class="count">8</span>
+                                      </p>
+                                      <!-- gauge--negat // 부정 -->
+                                      <p class="gauge--negat">
+                                        <span class="count">10</span>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- 채널 리스트 -->
+                                <ul class="sub__list">
+                                  <!-- 채널 아이템 // 채널 // 유튜브 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">Youtube</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">4</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">4</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count"></span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count"></span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 블로그</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">51</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">44</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">2</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">5</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!-- 채널 아이템 // 채널 -->
+                                  <li class="sub__item">
+                                    <div class="item-name">네이버 카페</div>
+                                    <div class="item-gauge post">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posts // 게시글 수 -->
+                                        <p class="gauge--posts">
+                                          <span class="count">168</span>
+                                          <!-- gauge--detail // 채널별 게시글 수 -->
+                                          <!-- <span class="gauge--detail"></span> -->
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="item-gauge emo">
+                                      <!-- gauge--100 // 100% -->
+                                      <div class="gauge--100">
+                                        <!-- gauge--posit // 긍정 -->
+                                        <p class="gauge--posit">
+                                          <span class="count">87</span>
+                                        </p>
+                                        <!-- gauge--neut // 중립 -->
+                                        <p class="gauge--neut">
+                                          <span class="count">15</span>
+                                        </p>
+                                        <!-- gauge--negat // 부정 -->
+                                        <p class="gauge--negat">
+                                          <span class="count">66</span>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 아티클 // 2. 브랜드별 추이, 성향 추이 -->
+              <article class="cont-artic artic--brand02 hFix slideIn delay-2">
+                <div class="artic__inner scrbar0">
+                  <!-- 컨텐츠 박스 -->
+                  <div class="cont cont--chart">
+                    <div class="cont__inner">
+                      <div class="cont-hd">
+                        <div class="cont-title">
+                          <span class="txt">브랜드별 상세 추이</span>
+                        </div>
+                      </div>
+                      <div class="cont-bd">
+                        <div class="cont-bd__inner">
+                          <div class="chart__list">
+                            <div class="list__inner">
+
+                              <!-- 버즈 발생 추이 -->
+                              <div class="chart__wrap a-1">
+                                <div class="chart-top">
+                                  <!-- 차트 이름 //  -->
+                                  <div class="chart-name">
+                                    <p class="name">버즈 발생 추이</p>
+                                  </div>
+                                  <!-- 차트 옵션 //  -->
+                                  <div class="chart-opt">
+                                    <div class="radio__wrap chart">
+                                      <label class="input-label">
+                                        <input id="chartA1daily" type="radio" value="" name="optChartA1" checked>
+                                        <span class="label-txt">일별</span>
+                                      </label>
+                                      <label class="input-label">
+                                        <input id="chartA1weekly" type="radio" value="" name="optChartA1">
+                                        <span class="label-txt">주별</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="chart__box">
+                                  <!-- 차트 // 버즈 발생 추이 -->
+                                  <div id="" class="chart">
+                                    <div class="chart__inner">
+                                      <canvas id="chartA1"></canvas>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- 긍/부정 추이 -->
+                              <div class="chart__wrap a-2">
+                                <div class="chart-top">
+                                  <!-- 차트 이름 //  -->
+                                  <div class="chart-name">
+                                    <p class="name">긍/부정 추이</p>
+                                  </div>
+                                  <!-- 차트 옵션 //  -->
+                                  <div class="chart-opt">
+                                    <div class="radio__wrap chart">
+                                      <label class="input-label">
+                                        <input id="chartA2daily" type="radio" value="" name="optChartA2" checked>
+                                        <span class="label-txt">일별</span>
+                                      </label>
+                                      <label class="input-label">
+                                        <input id="chartA2weekly" type="radio" value="" name="optChartA2">
+                                        <span class="label-txt">주별</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="chart-slct">
+                                    <div class="select__wrap chart">
+                                      <select name="" id="chartEmot">
+                                        <option value="">긍정</option>
+                                        <option value="">부정</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="chart__box">
+                                  <!-- 차트 //  -->
+                                  <div id="" class="chart">
+                                    <div class="chart__inner">
+                                      <canvas id="chartA2"></canvas>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="./src/js/jquery-3.5.1.js"></script>
+  <script src="./src/js/include.js"></script>
+  <script src="./src/js/lib/chart.umd.js"></script>
+  <script src="./src/js/lib/chartjs-plugin-datalabels.min.js"></script>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>

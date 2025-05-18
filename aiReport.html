@@ -80,59 +80,77 @@
                           <div class="record-new">
                             <div class="record__item new">
                               <a href="">
-                                <span class="txt">+ 새 대화 시작하기</span>
+                                <span class="icon"></span>
+                                <span class="txt">대화 시작</span>
                               </a>
                             </div>
                           </div>
                           <div class="record-prev">
-                            <ul class="record__list">
-                              <li class="record__item">
-                                <a href="">
-                                  <span class="txt">250506_1311 대화</span>
-                                </a>
-                              </li>
-                              <li class="record__item">
-                                <a href="">
-                                  <span class="txt">250506_1631 대화</span>
-                                </a>
-                              </li>
-                              <li class="record__item">
-                                <a href="">
-                                  <span class="txt">250507_1006 대화</span>
-                                </a>
-                              </li>
-                              <li class="record__item">
-                                <a href="">
-                                  <span class="txt">250507_1354 대화</span>
-                                </a>
-                              </li>
-                            </ul>
+                            <div class="box-title">
+                              <p class="icon"></p>
+                              <p class="txt">대화 목록</p>
+                            </div>
+                            <div class="record__box">
+                              <div class="box__inner scrbar">
+                                <ul class="record__list">
+                                  <li class="record__item">
+                                    <a href="">
+                                      <span class="txt">250506_1311 대화</span>
+                                    </a>
+                                  </li>
+                                  <li class="record__item">
+                                    <a href="">
+                                      <span class="txt">250506_1631 대화</span>
+                                    </a>
+                                  </li>
+                                  <li class="record__item">
+                                    <a href="">
+                                      <span class="txt">250507_1006 대화</span>
+                                    </a>
+                                  </li>
+                                  <li class="record__item">
+                                    <a href="">
+                                      <span class="txt">250507_1354 대화</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
                           </div>
                         </div>
 
                         <!-- 답변 페르소나 리스트 -->
                         <div class="pers__wrap">
-                          <ul class="pers__list">
-                            <!-- 페르소나 // type-oo <- 페르소나 명칭 구분 -->
-                            <li class="pers__item type-01">
-                              <a href="">
-                                <em class="icon"></em>
-                                <span class="txt">페르소나_01</span>
-                              </a>
-                            </li>
-                            <li class="pers__item type-02">
-                              <a href="">
-                                <em class="icon"></em>
-                                <span class="txt">페르소나_02</span>
-                              </a>
-                            </li>
-                            <li class="pers__item type-03">
-                              <a href="">
-                                <em class="icon"></em>
-                                <span class="txt">페르소나_03</span>
-                              </a>
-                            </li>
-                          </ul>
+                          <div class="box-title">
+                            <p class="icon"></p>
+                            <p class="txt">에임 페르소나</p>
+                          </div>
+                          <div class="pers__box">
+                            <div class="box__inner scrbar">
+                              <ul class="pers__list">
+                                <!-- 페르소나 // type-oo <- 페르소나 명칭 구분 -->
+                                <li class="pers__item type-01">
+                                  <a href="">
+                                    <em class="icon"></em>
+                                    <span class="txt">페르소나_01</span>
+                                  </a>
+                                </li>
+                                <li class="pers__item type-02">
+                                  <a href="">
+                                    <em class="icon"></em>
+                                    <span class="txt">페르소나_02</span>
+                                  </a>
+                                </li>
+                                <li class="pers__item type-03">
+                                  <a href="">
+                                    <em class="icon"></em>
+                                    <span class="txt">페르소나_03</span>
+                                  </a>
+                                </li>
+                              </ul>
+
+                            </div>
+                          </div>
                         </div>
                       </div>
 
@@ -140,39 +158,70 @@
                       <div class="cont-bd bd--side">
                         <div class="cont-bd__inner">
                           <!-- ai report 시작 버튼 -->
-                          <div class="start__wrap">
+                          <div class="start__wrap on">
+                            <div class="start-title">
+                              <p class="icon"></p>
+                              <p class="txt">
+                                <em class="user">사용자</em>
+                                <em class="name">님의 분석을 도와드릴게요.</em>
+                              </p>
+                            </div>
                             <div class="start-opt">
                               <ul class="obj--clck__list opt__list">
                                 <li class="obj--clck opt__item brand">
                                   <a href="javascript:void(0)">
                                     <div class="item__inner">
-                                      <p class="opt-name">브랜드 현황 분석 시작하기</p>
-                                      <p class="opt-desc">
-                                        <span class="txt">#경쟁사비교</span>
-                                        <span class="txt">#이슈체크</span>
-                                      </p>
+                                      <div class="item-left">
+                                        <p class="opt-icon"></p>
+                                      </div>
+                                      <div class="item-right">
+                                        <p class="opt-type">BRAND</p>
+                                        <p class="opt-name">브랜드 현황 분석 시작하기</p>
+                                        <p class="opt-desc">
+                                          <span class="tags">
+                                            <em class="txt">경쟁사비교</em>
+                                            <em class="txt">이슈체크</em>
+                                          </span>
+                                        </p>
+                                      </div>
                                     </div>
                                   </a>
                                 </li>
                                 <li class="obj--clck opt__item issue">
                                   <a href="javascript:void(0)">
                                     <div class="item__inner">
-                                      <p class="opt-name">이슈 분석 시작하기</p>
-                                      <p class="opt-desc">
-                                        <span class="txt">#개선점파악</span>
-                                        <span class="txt">#USP분석</span>
-                                      </p>
+                                      <div class="item-left">
+                                        <p class="opt-icon"></p>
+                                      </div>
+                                      <div class="item-right">
+                                        <p class="opt-type">ISSUE</p>
+                                        <p class="opt-name">이슈 분석 시작하기</p>
+                                        <p class="opt-desc">
+                                          <span class="tags">
+                                            <em class="txt">개선점파악</em>
+                                            <em class="txt">USP분석</em>
+                                          </span>
+                                        </p>
+                                      </div>
                                     </div>
                                   </a>
                                 </li>
                                 <li class="obj--clck opt__item profile">
                                   <a href="javascript:void(0)">
                                     <div class="item__inner">
-                                      <p class="opt-name">프로파일 분석 시작하기</p>
-                                      <p class="opt-desc">
-                                        <span class="txt">#페르소나생성</span>
-                                        <span class="txt">#타겟선정</span>
-                                      </p>
+                                      <div class="item-left">
+                                        <p class="opt-icon"></p>
+                                      </div>
+                                      <div class="item-right">
+                                        <p class="opt-type">PROFILE</p>
+                                        <p class="opt-name">프로파일 분석 시작하기</p>
+                                        <p class="opt-desc">
+                                          <span class="tags">
+                                            <em class="txt">페르소나생성</em>
+                                            <em class="txt">타겟선정</em>
+                                          </span>
+                                        </p>
+                                      </div>
                                     </div>
                                   </a>
                                 </li>
@@ -245,7 +294,7 @@
                           <!-- 추가 기능 -->
                           <div class="addit__wrap">
                             <!-- 대화 시작 전 추가 옵셥 -->
-                            <ul class="obj--clck__list addit__list start">
+                            <ul class="obj--clck__list addit__list start on">
                               <li class="obj--clck addit__item integ">
                                 <button>전체 현황 통합 분석하기</button>
                               </li>
@@ -284,7 +333,7 @@
       <div class="modal ai" id="aiStarter">
         <div class="modal-hd">
           <p class="modal-msg">
-            현재 조회된 정보를 토대로 대화가 시작됩니다.
+            현재 조회된 정보를 바탕으로 대화가 시작됩니다.
           </p>
         </div>
         <div class="modal-bd">
@@ -332,6 +381,16 @@
     // function preventClick(e) {
     //   e.preventDefault();
     // };
+
+    $(function () {
+      $('.start-opt .obj--clck').on('click', function () {
+        $('.start__wrap').removeClass('on');
+        $('.addit__list.start').removeClass('on');
+
+        $('.conv__wrap').addClass('on');
+        $('.addit__list.after').addClass('on');
+      })
+    })
   </script>
 </body>
 

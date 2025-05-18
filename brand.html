@@ -78,6 +78,43 @@
                   <p class="tap__item b-05"><span>브랜드E</span></p>
                 </div>
               </div>
+
+              <div class="top-element aim-tab slideIn delay-1">
+                <div class="tap__list">
+                  <p class="tap__item" id="aimOpener">
+                    <span>AIM 해설 보기</span>
+                  </p>
+                  <!-- 요약하기 -->
+                  <div class="aim-summary__wrap">
+                    <div class="modal aim-summary">
+                      <div class="modal-hd">
+                        <p class="icon"></p>
+                        <p class="modal-msg">브랜드 요약</p>
+                      </div>
+                      <div class="modal-bd">
+                        <div class="bd__inner">
+                          <div class="summary__para">
+                            <p class="txt">
+                              로보락 제품에 대한 고객들의 반응은 대체로 긍정적이지만, 물걸레 청소 시 발생하는 냄새 문제와 관련된 불만이 많으며, 가격 대비 성능에 대한 고민도 존재하는
+                              것으로 요약할 수 있습니다.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-ft">
+                        <div class="btn__wrap">
+                          <p class="btn btn--ty02" id="aimCloser">
+                            <button>닫기</button>
+                          </p>
+                          <p class="btn btn--ty02">
+                            <a href="./aiReport.html">추가 분석하기</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- 콘텐츠 컨테이너 // 브랜드별 레이더 -->
@@ -890,6 +927,18 @@
   <script src="./src/js/lib/chart.umd.js"></script>
   <script src="./src/js/lib/chartjs-plugin-datalabels.min.js"></script>
   <script src="./src/js/main.js"></script>
+
+  <script>
+    $(function () {
+      $('#aimOpener').on('click', function () {
+        $('.aim-summary__wrap').addClass('on');
+      });
+      $('#aimCloser').on('click', function () {
+        $('.aim-summary__wrap').removeClass('on');
+      })
+    });
+
+  </script>
 </body>
 
 </html>
